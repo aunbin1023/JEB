@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피아니스트 정은빈 - Official Website</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Playfair Display & Noto Serif KR) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        piano: {
+                            gold: '#c5a880',
+                            goldHover: '#b5976e',
+                            dark: '#111111',
+                            card: '#1a1a1a',
+                            lightBg: '#fbf9f5',
+                            accent: '#8c6d46'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', '"Noto Serif KR"', 'serif'],
+                        sans: ['"Montserrat"', '"Noto Sans KR"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+        }
+        .font-serif-title {
+            font-family: 'Playfair Display', 'Noto Serif KR', serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c5a880;
+        }
+    </style>
+</head>
+<body class="bg-piano-dark text-gray-200 antialiased selection:bg-piano-gold selection:text-black">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-piano-dark/90 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="#" class="flex items-center gap-3">
+                <i class="fa-solid font-bold text-2xl text-piano-gold fa-music"></i>
+                <span class="font-serif-title text-xl sm:text-2xl tracking-widest text-white uppercase font-bold">Jieun Lee</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <a href="#" class="flex items-center gap-3">
+                <i class="fa-solid font-bold text-2xl text-piano-gold fa-music"></i>
+                <span class="font-serif-title text-xl sm:text-2xl tracking-widest text-white uppercase font-bold">Eunbin Jeong</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+                <a href="#contact" class="px-5 py-2.5 rounded-full border border-piano-gold text-piano-gold hover:bg-piano-gold hover:text-black transition-all">문의하기</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-piano-card border-b border-white/10 px-4 pt-2 pb-6 space-y-4 text-center">
+        <a href="#about" class="block py-2 hover:text-piano-gold">소개</a>
+        <a href="#discography" class="block py-2 hover:text-piano-gold">음악듣기</a>
+        <a href="#schedule" class="block py-2 hover:text-piano-gold">공연 일정</a>
+        <a href="#lessons" class="block py-2 hover:text-piano-gold">레슨 안내</a>
+        <a href="#gallery" class="block py-2 hover:text-piano-gold">갤러리</a>
+        <a href="#contact" class="inline-block mt-2 px-6 py-2 rounded-full border border-piano-gold text-piano-gold hover:bg-piano-gold hover:text-black">문의하기</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <!-- Background Overlay / Image -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1920&auto=format&fit=crop" 
+             alt="Grand Piano" 
+             class="w-full h-full object-cover object-center opacity-30 scale-105 transition-transform duration-10000 hover:scale-100"
+             onerror="this.src='https://placehold.co/1920x1080/111111/FFFFFF?text=Pianist+Eunbin+Jeong'">
+        <div class="absolute inset-0 bg-gradient-to-t from-piano-dark via-piano-dark/60 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 py-20">
+        <p class="text-piano-gold uppercase tracking-[0.3em] text-sm sm:text-base font-semibold mb-4">Pianist & Educator</p>
+        <h1 class="font-serif-title text-4xl sm:text-6xl md:text-7xl font-bold text-white tracking-wide leading-tight mb-6">
+            건반 위에서 펼쳐지는 <br class="hidden sm:inline">울림과 감동의 순간
+        </h1>
+        <p class="max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10 font-light leading-relaxed">
+            클래식의 깊이 있는 해석과 따뜻한 감성으로 마음을 울리는 연주를 전합니다.<br class="hidden sm:inline">
+            피아니스트 정은빈의 공식 홈에 오신 것을 환영합니다.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#discography" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-piano-gold text-black font-semibold hover:bg-piano-goldHover transition-all flex items-center justify-center gap-2 shadow-lg shadow-piano-gold/20">
+                <i class="fa-solid fa-play text-sm"></i> 연주 듣기
+            </a>
+            <a href="#lessons" class="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/30 text-white font-medium hover:border-white hover:bg-white/10 transition-all">
+                레슨 수강 안내
+            </a>
+        </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400 hover:text-piano-gold transition-colors animate-bounce">
+        <i class="fa-solid fa-chevron-down text-xl"></i>
+    </a>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-24 bg-piano-dark border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <!-- Profile Image -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1571974599782-87624638275e?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Pianist Jieun Lee" 
+                         class="w-full h-[500px] object-cover"
+                         onerror="this.src='https://placehold.co/600x800/222222/CCCCCC?text=Profile+Image'">
+                </div>
+                <!-- Decorative background frame -->
+                <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-piano-gold/40 rounded-2xl -z-0 hidden sm:block"></div>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="lg:col-span-7 space-y-6">
+                <div>
+                    <span class="text-piano-gold uppercase tracking-widest text-xs font-semibold">About Artist</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-bold mt-1 mb-4">피아니스트 정은빈</h2>
+                    <p class="text-gray-400 leading-relaxed font-light">
+                        독일 베를린 국립음대(UdK) 석사 및 최고연주자과정을 졸업하고, 국내외 다수의 콩쿠르 입상과 교향악단 협연을 통해 탄탄한 입지를 다져온 피아니스트입니다.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed font-light mt-3">
+                        섬세한 테크닉과 낭만적인 음악적 해석으로 청중과 깊이 호흡하며, 연주 활동과 더불어 후학 양성에도 깊은 열정을 쏟고 있습니다.
+                    </p>
+                </div>
+
+                <!-- Biography Timeline / Tabs -->
+                <div class="space-y-4 pt-4 border-t border-white/10">
+                    <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-piano-gold"></i> 학력 및 경력
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2018 - 현재</span> <span>OO대학교 음악대학 피아노과 겸임교수</span></li>
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2016</span> <span>독일 베를린 국립음대 최고연주자과정(Konzertexamen) 졸업</span></li>
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2013</span> <span>독일 베를린 국립음대 석사(Master) 졸업</span></li>
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2010</span> <span>서울대학교 음악대학 기악과 피아노전공 학사 졸업</span></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t border-white/10">
+                    <h3 class="text-lg font-semibold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-trophy text-piano-gold"></i> 주요 수상 및 연주 경력
+                    </h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2023</span> <span>예술의전당 IBK챔버홀 리사이틀 독주회</span></li>
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2019</span> <span>프랑스 파리 국제 피아노 콩쿠르 2위 입상</span></li>
+                        <li class="flex gap-4"><span class="text-piano-gold font-mono w-24">2015</span> <span>독일 슈타인웨이 콩쿠르 1위</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Discography & Audio Preview Section -->
+<section id="discography" class="py-24 bg-piano-card relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-piano-gold uppercase tracking-widest text-xs font-semibold">Music & Media</span>
+            <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-bold mt-1">연주 들어보기</h2>
+            <p class="text-gray-400 mt-3 text-sm">대표 연주곡 음원을 온라인으로 감상하실 수 있습니다.</p>
+        </div>
+
+        <!-- Audio Player Card -->
+        <div class="bg-piano-dark p-6 sm:p-8 rounded-2xl border border-white/10 max-w-3xl mx-auto mb-12 shadow-xl">
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-xl bg-neutral-800 flex items-center justify-center flex-shrink-0 relative overflow-hidden border border-white/10">
+                    <i class="fa-solid fa-compact-disc text-5xl text-piano-gold animate-spin" style="animation-duration: 10s;" id="cd-icon"></i>
+                </div>
+                <div class="flex-grow text-center sm:text-left w-full">
+                    <span id="current-composer" class="text-piano-gold text-xs font-semibold tracking-wider uppercase">F. Chopin</span>
+                    <h3 id="current-title" class="text-xl font-serif-title text-white font-bold mt-1">Nocturne in C minor, Op. 48 No. 1</h3>
+                    <p id="current-album" class="text-xs text-gray-400 mt-1">Album: Romantic Resonance (2022)</p>
+
+                    <!-- Player Controls -->
+                    <div class="mt-4 flex flex-col gap-2">
+                        <!-- Progress Bar -->
+                        <div class="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden cursor-pointer" id="progress-container">
+                            <div id="progress-bar" class="bg-piano-gold h-full w-0 transition-all duration-200"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-500 font-mono">
+                            <span id="curr-time">0:00</span>
+                            <span id="dur-time">0:30</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center sm:justify-start gap-4 mt-2">
+                        <button id="prev-btn" class="text-gray-400 hover:text-white transition-colors p-2"><i class="fa-solid fa-backward"></i></button>
+                        <button id="play-btn" class="w-12 h-12 rounded-full bg-piano-gold text-black flex items-center justify-center hover:bg-piano-goldHover transition-all shadow-md">
+                            <i class="fa-solid fa-play ml-0.5" id="play-icon"></i>
+                        </button>
+                        <button id="next-btn" class="text-gray-400 hover:text-white transition-colors p-2"><i class="fa-solid fa-forward"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Song Item 1 -->
+            <div class="playlist-item cursor-pointer bg-piano-dark/50 hover:bg-piano-dark p-5 rounded-xl border border-white/5 hover:border-piano-gold/50 transition-all flex items-center justify-between group"
+                 data-title="Nocturne in C minor, Op. 48 No. 1" data-composer="F. Chopin" data-album="Romantic Resonance (2022)" data-audio="piano1">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-piano-gold group-hover:bg-piano-gold group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold group-hover:text-piano-gold transition-colors">Chopin Nocturne Op.48 No.1</h4>
+                        <p class="text-xs text-gray-400">쇼팽 야상곡 13번</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-gray-500">0:30</span>
+            </div>
+
+            <!-- Song Item 2 -->
+            <div class="playlist-item cursor-pointer bg-piano-dark/50 hover:bg-piano-dark p-5 rounded-xl border border-white/5 hover:border-piano-gold/50 transition-all flex items-center justify-between group"
+                 data-title="Moonlight Sonata 3rd Movement" data-composer="L. v. Beethoven" data-album="Beethoven Special (2021)" data-audio="piano2">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-piano-gold group-hover:bg-piano-gold group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold group-hover:text-piano-gold transition-colors">Beethoven Moonlight 3rd Mov.</h4>
+                        <p class="text-xs text-gray-400">베토벤 월광 소나타 3악장</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-gray-500">0:30</span>
+            </div>
+
+            <!-- Song Item 3 -->
+            <div class="playlist-item cursor-pointer bg-piano-dark/50 hover:bg-piano-dark p-5 rounded-xl border border-white/5 hover:border-piano-gold/50 transition-all flex items-center justify-between group"
+                 data-title="Clair de Lune" data-composer="C. Debussy" data-album="Impressionism Pieces (2023)" data-audio="piano3">
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-lg bg-neutral-800 flex items-center justify-center text-piano-gold group-hover:bg-piano-gold group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold group-hover:text-piano-gold transition-colors">Debussy Clair de Lune</h4>
+                        <p class="text-xs text-gray-400">드뷔시 달빛</p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono text-gray-500">0:30</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Concert Schedule Section -->
+<section id="schedule" class="py-24 bg-piano-dark border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-piano-gold uppercase tracking-widest text-xs font-semibold">Concerts & Events</span>
+                <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-bold mt-1">공연 일정</h2>
+            </div>
+            <p class="text-gray-400 text-sm mt-2 md:mt-0">티켓 예매 및 공연 관련 문의는 연락처로 부탁드립니다.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Event Item 1 -->
+            <div class="bg-piano-card p-6 rounded-xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-piano-gold/40 transition-all">
+                <div class="flex items-center gap-6">
+                    <div class="text-center px-4 py-2 bg-piano-dark rounded-lg border border-white/10 min-w-[90px]">
+                        <span class="block text-xs uppercase text-piano-gold font-bold">2026.11</span>
+                        <span class="block text-2xl font-serif-title font-bold text-white">28</span>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-semibold bg-piano-gold/20 text-piano-gold mb-1">독주회</span>
+                        <h3 class="text-lg font-bold text-white">정은빈 피아노 리사이틀 "Romantic Elegance"</h3>
+                        <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-location-dot mr-1 text-piano-gold"></i> 예술의전당 콘서트홀 | 오후 20:00</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+                    <span class="text-xs px-3 py-1.5 rounded-full bg-emerald-900/40 text-emerald-400 border border-emerald-500/30">티켓 오픈중</span>
+                    <button class="px-5 py-2 text-xs font-semibold rounded-full bg-piano-gold text-black hover:bg-piano-goldHover transition-colors">예매하기</button>
+                </div>
+            </div>
+
+            <!-- Event Item 2 -->
+            <div class="bg-piano-card p-6 rounded-xl border border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 hover:border-piano-gold/40 transition-all">
+                <div class="flex items-center gap-6">
+                    <div class="text-center px-4 py-2 bg-piano-dark rounded-lg border border-white/10 min-w-[90px]">
+                        <span class="block text-xs uppercase text-piano-gold font-bold">2026.12</span>
+                        <span class="block text-2xl font-serif-title font-bold text-white">15</span>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-semibold bg-purple-900/30 text-purple-300 mb-1">실내악</span>
+                        <h3 class="text-lg font-bold text-white">송년 음악회 - 트리오 소나타의 밤</h3>
+                        <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-location-dot mr-1 text-piano-gold"></i> 세종문화회관 체임버홀 | 오후 19:30</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 w-full md:w-auto justify-end">
+                    <span class="text-xs px-3 py-1.5 rounded-full bg-gray-800 text-gray-400 border border-gray-700">오픈 예정</span>
+                    <button class="px-5 py-2 text-xs font-semibold rounded-full border border-white/20 text-gray-300 hover:bg-white/10 transition-colors">알림받기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lesson Information Section -->
+<section id="lessons" class="py-24 bg-piano-card relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-piano-gold uppercase tracking-widest text-xs font-semibold">Masterclass & Lessons</span>
+            <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-bold mt-1">피아노 레슨 안내</h2>
+            <p class="text-gray-400 mt-3 text-sm">기초부터 입시, 취미 맞춤형까지 수강생의 목적에 맞춰 일대일 맞춤 레슨을 진행합니다.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-piano-dark p-8 rounded-2xl border border-white/10 hover:border-piano-gold/50 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-piano-gold/10 text-piano-gold flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <h3 class="font-serif-title text-xl font-bold text-white mb-2">전공 & 입시 클래스</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        예중·예고·음대 입시 준비생 및 전공자를 위한 고급 클래스입니다. 테크닉 교정과 곡 해석, 실전 모의 연주 평가를 포함합니다.
+                    </p>
+                </div>
+                <ul class="space-y-2 text-xs text-gray-300 border-t border-white/10 pt-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 주 1~2회 (회당 60분/90분)</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 정기 입시 평가회 개최</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 해외 유학 및 콩쿠르 컨설팅</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-piano-dark p-8 rounded-2xl border border-piano-gold/50 relative shadow-xl flex flex-col justify-between">
+                <span class="absolute -top-3 right-6 bg-piano-gold text-black font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full">Popular</span>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-piano-gold text-black flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="font-serif-title text-xl font-bold text-white mb-2">성인 취미 클래스</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        바쁜 일상 속에서 클래식 피아노, 뉴에이지, 영화 OST 등 원하는 곡을 완성하는 성인 맞춤형 힐링 레슨입니다.
+                    </p>
+                </div>
+                <ul class="space-y-2 text-xs text-gray-300 border-t border-white/10 pt-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 맞춤형 난이도 악보 제공</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 자율 연습실 이용 가능</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 성인 수강생 연주회 참여</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-piano-dark p-8 rounded-2xl border border-white/10 hover:border-piano-gold/50 transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-piano-gold/10 text-piano-gold flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="font-serif-title text-xl font-bold text-white mb-2">원포인트 마스터클래스</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        콩쿠르, 연주회, 실기 시험을 앞두고 집중적인 피드백과 음악적 완성도를 높이고 싶은 연주자를 위한 단기 레슨입니다.
+                    </p>
+                </div>
+                <ul class="space-y-2 text-xs text-gray-300 border-t border-white/10 pt-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 1:1 원포인트 밀착 레슨</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 연주 영상 촬영 및 정밀 분석</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-piano-gold"></i> 무대 멘탈 관리 팁 제공</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-24 bg-piano-dark border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-piano-gold uppercase tracking-widest text-xs font-semibold">Photo Gallery</span>
+            <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-bold mt-1">갤러리</h2>
+            <p class="text-gray-400 mt-3 text-sm">공연 현장 및 레슨 스튜디오 스케치 모습입니다.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="overflow-hidden rounded-xl border border-white/10 aspect-square group">
+                <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=600&auto=format&fit=crop" 
+                     alt="Gallery 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-xl border border-white/10 aspect-square group">
+                <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?q=80&w=600&auto=format&fit=crop" 
+                     alt="Gallery 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-xl border border-white/10 aspect-square group">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" 
+                     alt="Gallery 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="overflow-hidden rounded-xl border border-white/10 aspect-square group">
+                <img src="https://images.unsplash.com/photo-1542120526-89a7039730ab?q=80&w=600&auto=format&fit=crop" 
+                     alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Lesson Inquiry Form Section -->
+<section id="contact" class="py-24 bg-piano-card relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Contact Info -->
+            <div class="lg:col-span-5 space-y-6">
+                <div>
+                    <span class="text-piano-gold uppercase tracking-widest text-xs font-semibold">Get In Touch</span>
+                    <h2 class="font-serif-title text-3xl sm:text-4xl text-white font-bold mt-1">문의하기 & 위치</h2>
+                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">
+                        레슨 상담, 연주회 초청, 협연 문의 등 편하게 남겨주시면 빠른 시일 내에 답변드리겠습니다.
+                    </p>
+                </div>
+
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-piano-dark border border-white/10 flex items-center justify-center text-piano-gold">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">스튜디오 위치</p>
+                            <p class="text-sm font-medium text-white">서울시 서초구 반포대로 123 피아노빌딩 3층</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-piano-dark border border-white/10 flex items-center justify-center text-piano-gold">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">이메일 문의</p>
+                            <p class="text-sm font-medium text-white">pianist_eunbin@email.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-piano-dark border border-white/10 flex items-center justify-center text-piano-gold">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">전화 번호</p>
+                            <p class="text-sm font-medium text-white">010-1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SNS links -->
+                <div class="pt-6 border-t border-white/10 flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-piano-dark border border-white/10 flex items-center justify-center text-gray-300 hover:text-piano-gold hover:border-piano-gold transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-piano-dark border border-white/10 flex items-center justify-center text-gray-300 hover:text-piano-gold hover:border-piano-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-piano-dark border border-white/10 flex items-center justify-center text-gray-300 hover:text-piano-gold hover:border-piano-gold transition-colors"><i class="fa-solid fa-blog"></i></a>
+                </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="lg:col-span-7 bg-piano-dark p-8 rounded-2xl border border-white/10">
+                <h3 class="text-xl font-bold text-white mb-6 font-serif-title">상담 신청하기</h3>
+                <form id="contact-form" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">성함 *</label>
+                            <input type="text" required placeholder="홍길동" class="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-piano-gold transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">연락처 *</label>
+                            <input type="tel" required placeholder="010-0000-0000" class="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-piano-gold transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">문의 유형</label>
+                        <select class="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-piano-gold transition-colors">
+                            <option value="lesson-adult">성인 취미 레슨</option>
+                            <option value="lesson-pro">전공 / 입시 레슨</option>
+                            <option value="masterclass">마스터클래스</option>
+                            <option value="concert">공연 / 연주 요청</option>
+                            <option value="other">기타 문의</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">문의 내용 *</label>
+                        <textarea rows="4" required placeholder="레슨 희망 시간대나 문의사항을 입력해주세요." class="w-full bg-neutral-900 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-piano-gold transition-colors"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 rounded-lg bg-piano-gold text-black font-semibold hover:bg-piano-goldHover transition-all shadow-lg">
+                        문의 보내기
+                    </button>
+                </form>
+
+                <!-- Status Message -->
+                <div id="form-message" class="hidden mt-4 p-3 rounded-lg text-center text-xs"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Guestbook Section -->
+<section class="py-16 bg-piano-dark border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8">
+            <h3 class="font-serif-title text-2xl text-white font-bold">한줄 방명록</h3>
+            <p class="text-xs text-gray-400 mt-1">응원 메세지나 방문 후기를 자유롭게 남겨주세요.</p>
+        </div>
+
+        <!-- Add Guestbook Form -->
+        <form id="guestbook-form" class="flex gap-2 mb-8">
+            <input type="text" id="gb-name" placeholder="이름" required class="w-1/4 bg-neutral-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-piano-gold">
+            <input type="text" id="gb-msg" placeholder="응원 한마디를 남겨주세요!" required class="flex-grow bg-neutral-900 border border-white/10 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-piano-gold">
+            <button type="submit" class="px-5 py-2 bg-piano-gold text-black font-semibold text-xs rounded-lg hover:bg-piano-goldHover">등록</button>
+        </form>
+
+        <!-- Guestbook Messages List -->
+        <div id="guestbook-list" class="space-y-3">
+            <div class="bg-piano-card p-4 rounded-lg border border-white/5 flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-semibold text-piano-gold">김민지</span>
+                    <p class="text-xs text-gray-300 mt-1">선생님 독주회 너무 감동적이었습니다! 다음 연주회도 기대할게요.</p>
+                </div>
+                <span class="text-[10px] text-gray-500 font-mono">2026.10.12</span>
+            </div>
+            <div class="bg-piano-card p-4 rounded-lg border border-white/5 flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-semibold text-piano-gold">박상현</span>
+                    <p class="text-xs text-gray-300 mt-1">레슨 받으면서 피아노 치는 즐거움을 다시 알게 되었습니다. 감사해요!</p>
+                </div>
+                <span class="text-[10px] text-gray-500 font-mono">2026.10.05</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black py-12 border-t border-white/10 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+        <div class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-music text-piano-gold"></i>
+            <span class="font-serif-title text-base text-white font-bold tracking-widest">PIANIST EUNBIN JEONG</span>
+        </div>
+        <p>© 2026 Pianist Eunbin Jeong. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Web Audio API Synth for Piano Tone Preview (Self-contained sound generator)
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function playPianoTone(freq, duration = 1.5) {
+        if (!audioCtx) audioCtx = new AudioContext();
+        
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+    }
+
+    // Audio Player State & Melody Sequences
+    const songs = [
+        {
+            title: "Nocturne in C minor, Op. 48 No. 1",
+            composer: "F. Chopin",
+            album: "Romantic Resonance (2022)",
+            notes: [261.63, 329.63, 392.00, 523.25, 392.00, 329.63]
+        },
+        {
+            title: "Moonlight Sonata 3rd Movement",
+            composer: "L. v. Beethoven",
+            album: "Beethoven Special (2021)",
+            notes: [220.00, 261.63, 329.63, 440.00, 523.25, 659.25]
+        },
+        {
+            title: "Clair de Lune",
+            composer: "C. Debussy",
+            album: "Impressionism Pieces (2023)",
+            notes: [349.23, 440.00, 523.25, 698.46, 523.25, 440.00]
+        }
+    ];
+
+    let currentSongIndex = 0;
+    let isPlaying = false;
+    let timer = null;
+    let progress = 0;
+
+    const playBtn = document.getElementById('play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const currTimeEl = document.getElementById('curr-time');
+    const durTimeEl = document.getElementById('dur-time');
+
+    function updateSongUI() {
+        const song = songs[currentSongIndex];
+        document.getElementById('current-title').textContent = song.title;
+        document.getElementById('current-composer').textContent = song.composer;
+        document.getElementById('current-album').textContent = `Album: ${song.album}`;
+        progress = 0;
+        progressBar.style.width = '0%';
+        currTimeEl.textContent = '0:00';
+    }
+
+    function togglePlay() {
+        if (isPlaying) {
+            pauseSong();
+        } else {
+            playSong();
+        }
+    }
+
+    function playSong() {
+        isPlaying = true;
+        playIcon.classList.remove('fa-play');
+        playIcon.classList.add('fa-pause');
+
+        // Play melody tones using Web Audio API synth
+        const currentSong = songs[currentSongIndex];
+        let noteIndex = 0;
+        
+        timer = setInterval(() => {
+            progress += 3.33; // 30 sec scale
+            if (progress > 100) {
+                progress = 0;
+                nextSong();
+                return;
+            }
+            progressBar.style.width = `${progress}%`;
+            
+            // Format time display
+            const currentSec = Math.floor((progress / 100) * 30);
+            currTimeEl.textContent = `0:${currentSec < 10 ? '0' : ''}${currentSec}`;
+
+            // Play simulated piano note every few steps
+            if (Math.floor(progress) % 15 === 0) {
+                playPianoTone(currentSong.notes[noteIndex % currentSong.notes.length]);
+                noteIndex++;
+            }
+        }, 1000);
+    }
+
+    function pauseSong() {
+        isPlaying = false;
+        playIcon.classList.remove('fa-pause');
+        playIcon.classList.add('fa-play');
+        clearInterval(timer);
+    }
+
+    function prevSong() {
+        pauseSong();
+        currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+        updateSongUI();
+        playSong();
+    }
+
+    function nextSong() {
+        pauseSong();
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        updateSongUI();
+        playSong();
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+    prevBtn.addEventListener('click', prevSong);
+    nextBtn.addEventListener('click', nextSong);
+
+    // Playlist items click handler
+    document.querySelectorAll('.playlist-item').forEach((item, idx) => {
+        item.addEventListener('click', () => {
+            currentSongIndex = idx;
+            pauseSong();
+            updateSongUI();
+            playSong();
+        });
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formMessage.classList.remove('hidden', 'bg-red-900/50', 'text-red-300');
+        formMessage.classList.add('bg-emerald-900/50', 'text-emerald-300', 'border', 'border-emerald-500/30');
+        formMessage.textContent = '성공적으로 문의가 접수되었습니다! 확인 후 연락드리겠습니다.';
+        contactForm.reset();
+
+        setTimeout(() => {
+            formMessage.classList.add('hidden');
+        }, 4000);
+    });
+
+    // Guestbook Form Handler
+    const guestbookForm = document.getElementById('guestbook-form');
+    const guestbookList = document.getElementById('guestbook-list');
+
+    guestbookForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('gb-name').value;
+        const msg = document.getElementById('gb-msg').value;
+        const today = new Date().toISOString().split('T')[0].replace(/-/g, '.');
+
+        const newEntry = document.createElement('div');
+        newEntry.className = 'bg-piano-card p-4 rounded-lg border border-white/5 flex justify-between items-start animate-fade-in';
+        newEntry.innerHTML = `
+            <div>
+                <span class="text-xs font-semibold text-piano-gold">${escapeHtml(name)}</span>
+                <p class="text-xs text-gray-300 mt-1">${escapeHtml(msg)}</p>
+            </div>
+            <span class="text-[10px] text-gray-500 font-mono">${today}</span>
+        `;
+
+        guestbookList.prepend(newEntry);
+        guestbookForm.reset();
+    });
+
+    function escapeHtml(text) {
+        return text.replace(/[&<>"']/g, function(m) {
+            return {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            }[m];
+        });
+    }
+</script>
+</body>
+</html>
